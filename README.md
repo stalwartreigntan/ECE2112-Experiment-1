@@ -21,13 +21,13 @@ The use of string indexing and slicing allows us to rearrange characters in a wo
 
 Examples:
 
-print(rotate_word("python"))  # ythonp
+    print(rotate_word("python"))  # ythonp
 
-print(rotate_word("logic"))   # ogicl
+    print(rotate_word("logic"))   # ogicl
 
-print(rotate_word("Code"))    # odeC
+    print(rotate_word("Code"))    # odeC
 
-print(rotate_word("A"))       # A
+    print(rotate_word("A"))       # A
 
 _______________________________
 # B. USERNAME BUILDER PROBLEM
