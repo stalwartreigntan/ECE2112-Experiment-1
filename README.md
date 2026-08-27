@@ -7,11 +7,14 @@ Name: Tan, Stalwart Reign J.
 Section: 2ECE-D
 
 
+
 This experiment introduces basic Python programming concepts, including functions, string operations, indexing, and other methods. These concepts are applied to solve three problems: Word Rotation, Username Building, and Bookend Swapping.
+
 
 ____________________________
 # A. WORD ROTATION PROBLEM
 ____________________________
+
 def rotate_word(text):
 
     return text[1:] + text[0]
