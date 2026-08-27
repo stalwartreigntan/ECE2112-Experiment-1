@@ -53,12 +53,18 @@ Examples:
 ___________________________
 # C. BOOKEND SWAP PROBLEM
 ___________________________
-def swap_bookends(items):
-    first, *middle, last = items
-    return [last, *middle, first]
+
+    def swap_bookends(items):
+        first, *middle, last = items
+        return [last, *middle, first]
+
 Bookend Swap creates a function (swap_bookends) that keeps the middle element in their original position, but swaps the first and the last element. To assign the elements, we use the variables "first", "middle", and "last". The code statement (return [last, *middle, first]) gives us the new list that has already swapped the first and last elements.
 
+
 Examples:
-print(swap_bookends([1, 2, 3, 4, 5, 6]))       # [6, 2, 3, 4, 5, 1]
-print(swap_bookends(["red", "green", "blue"])) # ['blue', 'green', 'red']
-print(swap_bookends([8, 3]))                   # [3, 8]
+
+    print(swap_bookends([1, 2, 3, 4, 5, 6]))       # [6, 2, 3, 4, 5, 1]
+    
+    print(swap_bookends(["red", "green", "blue"])) # ['blue', 'green', 'red']
+
+    print(swap_bookends([8, 3]))                   # [3, 8]
