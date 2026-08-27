@@ -16,7 +16,6 @@ ____________________________
 ____________________________
 
 def rotate_word(text):
-
     return text[1:] + text[0]
 
 The use of string indexing and slicing allows us to rearrange characters in a word. To define a new function in Python, we use (def) in the beginning of the code, while the name of the function is (rotate_word). This allows us to rotate the letters of each words. To allow all remaining letters, except for the first letter of the word, to remain at its order, we use the code statement (text[1:]). To move the first character of the string to the end, we apply (+ text [0]). The (return) is a keyword that allows the function to send back the result of the code.
