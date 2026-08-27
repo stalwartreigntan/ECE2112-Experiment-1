@@ -1,1 +1,204 @@
 # ECE2112-Experiment-1
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "bb1a3a15-b6de-4e7a-9afd-033caa118908",
+   "metadata": {},
+   "source": [
+    "# ECE 2112 - Experiment 1: Introduction to Python Programming"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "aa94b299-ed83-49ab-8e7a-4fda6ee31abc",
+   "metadata": {},
+   "source": [
+    "Name: Tan, Stalwart Reign J.\n",
+    "\n",
+    "Section: 2ECE-D"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cbae6d4b-f170-493b-9ea8-ca853a609091",
+   "metadata": {},
+   "source": [
+    "This experiment introduces basic Python programming concepts, including functions, string operations, indexing, and other methods. These concepts are applied to solve three problems: Word Rotation, Username Building, and Bookend Swapping."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "09367b13-7fdb-4c33-975a-f1aee546663a",
+   "metadata": {},
+   "source": [
+    "# A. WORD ROTATION PROBLEM"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "fa729784-4f0c-464f-be3d-a35f78df2241",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def rotate_word(text):\n",
+    "    return text[1:] + text[0]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "feb0c43a-925a-4ff9-92a3-10e757d135ab",
+   "metadata": {},
+   "source": [
+    "The use of string indexing and slicing allows us to rearrange characters in a word. To define a new function in Python, we use (def) in the beginning of the code, while the name of the function is (rotate_word). This allows us to rotate the letters of each words. To allow all remaining letters, except for the first letter of the word, to remain at its order, we use the code statement (text[1:]). To move the first character of the string to the end, we apply (+ text [0]). The (return) is a keyword that allows the function to send back the result of the code."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "2e6c5a79-ea03-4063-b1f7-aba472159dde",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "ythonp\n",
+      "ogicl\n",
+      "odeC\n",
+      "A\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(rotate_word(\"python\"))  # ythonp\n",
+    "print(rotate_word(\"logic\"))   # ogicl\n",
+    "print(rotate_word(\"Code\"))    # odeC\n",
+    "print(rotate_word(\"A\"))       # A"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ffd7786d-e994-4376-b747-e526ba7cdaf2",
+   "metadata": {},
+   "source": [
+    "# B. USERNAME BUILDER PROBLEM"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "3fdc3252-25a8-4b3c-a873-cd6f9242556f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def make_username(first_name, last_name):\n",
+    "    first_name = first_name.lower().replace(\" \", \"\")\n",
+    "    last_name = last_name.lower().replace(\" \", \"\")\n",
+    "    return first_name + \".\" + last_name"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2cb95495-4891-422d-b6d5-98016c2c2364",
+   "metadata": {},
+   "source": [
+    "In this problem, we have to create a function that takes a person's first name and last name,  turning it as a formatted username. In order to do this, we must turn all letters to lowercase, wherein we apply (first_name.lower().replace(\" \", \"\")) and (last_name.lower().replace(\" \", \"\")). To remove the spaces between the first name and the last name, we join the two names using a period (.) between them, which we write as (first_name + \".\" + last_name)."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "76a2030a-f568-42ae-9d60-c5d729e8c14a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "ada.lovelace\n",
+      "alan.turing\n",
+      "anamaria.deleon\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(make_username(\"Ada\", \"Lovelace\"))      # ada.lovelace\n",
+    "print(make_username(\"Alan\", \"Turing\"))       # alan.turing\n",
+    "print(make_username(\"Ana Maria\", \"De Leon\")) # anamaria.deleon"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6df599fe-35b4-4dde-b9f0-f02741c88813",
+   "metadata": {},
+   "source": [
+    "# C. BOOKEND SWAP PROBLEM"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "67bcc029-6980-404f-924b-dba490b46a70",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def swap_bookends(items):\n",
+    "    first, *middle, last = items\n",
+    "    return [last, *middle, first]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9b6dd86b-fb29-4410-829b-24d6370617d5",
+   "metadata": {},
+   "source": [
+    "Bookend Swap creates a function (swap_bookends) that keeps the middle element in their original position, but swaps the first and the last element. To assign the elements, we use the variables \"first\", \"middle\", and \"last\". The code statement (return [last, *middle, first]) gives us the new list that has already swapped the first and last elements."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "caba09ee-49b6-48e4-8c97-35f404825a72",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[6, 2, 3, 4, 5, 1]\n",
+      "['blue', 'green', 'red']\n",
+      "[3, 8]\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(swap_bookends([1, 2, 3, 4, 5, 6]))       # [6, 2, 3, 4, 5, 1]\n",
+    "print(swap_bookends([\"red\", \"green\", \"blue\"])) # ['blue', 'green', 'red']\n",
+    "print(swap_bookends([8, 3]))                   # [3, 8]"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.14.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
