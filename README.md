@@ -7,7 +7,6 @@ Name: Tan, Stalwart Reign J.
 Section: 2ECE-D
 
 
-
 This experiment introduces basic Python programming concepts, including functions, string operations, indexing, and other methods. These concepts are applied to solve three problems: Word Rotation, Username Building, and Bookend Swapping.
 
 
@@ -15,15 +14,19 @@ ____________________________
 # A. WORD ROTATION PROBLEM
 ____________________________
 
-def rotate_word(text):
-    return text[1:] + text[0]
+    def rotate_word(text):
+        return text[1:] + text[0]
 
 The use of string indexing and slicing allows us to rearrange characters in a word. To define a new function in Python, we use (def) in the beginning of the code, while the name of the function is (rotate_word). This allows us to rotate the letters of each words. To allow all remaining letters, except for the first letter of the word, to remain at its order, we use the code statement (text[1:]). To move the first character of the string to the end, we apply (+ text [0]). The (return) is a keyword that allows the function to send back the result of the code.
 
 Examples:
+
 print(rotate_word("python"))  # ythonp
+
 print(rotate_word("logic"))   # ogicl
+
 print(rotate_word("Code"))    # odeC
+
 print(rotate_word("A"))       # A
 
 _______________________________
